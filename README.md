@@ -1,3 +1,11 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=coverage)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=bugs)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=BrunoAST_rh&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=BrunoAST_rh)
+
 # Rh
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
