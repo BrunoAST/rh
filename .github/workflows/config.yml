@@ -21,9 +21,6 @@ jobs:
 
       - name: Run install dependencies
         run: npm install
-        
-      - name: Run Chrome  
-        run: chrome
 
       - name: Run test
         run: npm run test:ci
