@@ -13,16 +13,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - uses: nanasess/setup-chromedriver@master
+      - uses: browser-actions/setup-chrome@latest
+      
         with:
           node-version: '14'
           cache: 'npm'
 
       - name: Run install dependencies
         run: npm install
+        
+      - name: Run Chrome  
+        run: chrome
 
       - name: Run test
-        run: npm run test
+        run: npm run test:ci
 
   sonarcloud:
     name: SonarCloud
