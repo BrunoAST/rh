@@ -33,6 +33,8 @@ chrome-profiler-events*.json
 # misc
 /.angular/cache
 /.sass-cache
+/.scannerwork
+/configs
 /connect.lock
 /coverage
 /libpeerconnection.log
