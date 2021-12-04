@@ -20,7 +20,7 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
-    "rh-core-ui-3": "file:rh-core-ui-3-0.0.3.tgz",
+    "@innove/rh-core-ui": "^1.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

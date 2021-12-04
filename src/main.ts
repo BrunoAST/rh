@@ -3,7 +3,7 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
 import { AppModule } from "./app/app.module";
 import { environment } from "./environments/environment";
-import { defineCustomElements } from "rh-core-ui-3/loader";
+import { defineCustomElements } from "@innove/rh-core-ui/loader";
 
 if (environment.production) {
   enableProdMode();

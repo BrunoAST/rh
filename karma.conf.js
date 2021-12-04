@@ -29,7 +29,7 @@ module.exports = function (config) {
       subdir: ".",
       reporters: [
         { type: "lcov" },
-        { type: 'text-summary' }
+        { type: "text-summary" }
       ]
     },
     reporters: ["progress", "kjhtml"],
