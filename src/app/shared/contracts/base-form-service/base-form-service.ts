@@ -19,6 +19,20 @@ export abstract class BaseFormService {
     return this.form.get(field)?.value;
   }
 
+  isFieldInvalid(field: string): boolean {
+    this.validateField(field);
+    return !!this.form.get(field)?.invalid;
+  }
+
+  isFormInvalid(): boolean {
+    return this.form.invalid;
+  }
+
+  hasError(field: string, errorName: string): boolean {
+    this.validateField(field);
+    return !!this.form.get(field)?.hasError(errorName);
+  }
+
   private validateField(field: string): void {
     if (!this.form.get(field)) {
       throw new Error(`The field ${field} doesn't exist in the form`);
