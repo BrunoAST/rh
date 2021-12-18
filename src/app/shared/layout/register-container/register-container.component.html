@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="header">
+    <rh-breadcrumbs
+      class="header__breadcrumbs"
+      [paths]="breadcrumbsPaths"
+    ></rh-breadcrumbs>
+
+    <div class="header__action">
+      <h1 class="title">{{ headerTitle }}</h1>
+      <rh-button
+        variant="filled"
+        ionIconName="save"
+        [disabled]="isSaveButtonDisabled"
+        (clicked)="emitOnSaveClicked()"
+      >
+        Salvar
+      </rh-button>
+    </div>
+  </div>
+
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+</div>
