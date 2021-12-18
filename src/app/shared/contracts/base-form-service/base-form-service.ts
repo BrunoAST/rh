@@ -11,17 +11,17 @@ export abstract class BaseFormService {
 
   updateFieldValue(field: string, value: any): void {
     this.validateField(field);
-    this.form.get(field)?.setValue(value);
+    this.form.get(field).setValue(value);
   }
 
   getFieldValue(field: string): any {
     this.validateField(field);
-    return this.form.get(field)?.value;
+    return this.form.get(field).value;
   }
 
   isFieldInvalid(field: string): boolean {
     this.validateField(field);
-    return !!this.form.get(field)?.invalid;
+    return this.form.get(field).invalid;
   }
 
   isFormInvalid(): boolean {
@@ -30,7 +30,7 @@ export abstract class BaseFormService {
 
   hasError(field: string, errorName: string): boolean {
     this.validateField(field);
-    return !!this.form.get(field)?.hasError(errorName);
+    return this.form.get(field).hasError(errorName);
   }
 
   private validateField(field: string): void {
