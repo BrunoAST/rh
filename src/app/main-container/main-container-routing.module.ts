@@ -14,12 +14,8 @@ const ROUTES: Routes = [
         loadChildren: () => import("./components/home/home.module").then(m => m.HomeModule)
       },
       {
-        path: APP_ROUTES.competenceRegister,
-        loadChildren: () => import("./components/competence-register/competence-register.module").then(m => m.CompetenceRegisterModule)
-      },
-      {
-        path: APP_ROUTES.competenceList,
-        loadChildren: () => import("./components/competence-list/competence-list.module").then(m => m.CompetenceListModule)
+        path: APP_ROUTES.competence,
+        loadChildren: () => import("./components/competence/competence.module").then(m => m.CompetenceModule)
       },
       {
         path: "**",
