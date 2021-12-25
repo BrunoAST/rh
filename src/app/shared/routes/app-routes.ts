@@ -1,5 +1,5 @@
 export const APP_ROUTES = {
   home: "",
-  competenceRegister: "cadastro-competencia",
-  competenceList: "competencias"
+  competence: "competencia",
+  register: "cadastro",
 };
