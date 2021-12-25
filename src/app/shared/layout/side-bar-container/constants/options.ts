@@ -9,7 +9,7 @@ export const OPTIONS: MenuItems[] = [
   },
   {
     name: "Competências",
-    url: APP_ROUTES.competenceRegister,
+    url: APP_ROUTES.competence,
     ionIconName: "extension-puzzle"
   }
 ];
