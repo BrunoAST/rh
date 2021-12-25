@@ -3,6 +3,7 @@
     <rh-breadcrumbs
       class="header__breadcrumbs"
       [paths]="breadcrumbsPaths"
+      (pathClicked)="navigateToPath($event)"
     ></rh-breadcrumbs>
 
     <div class="header__action">
