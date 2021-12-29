@@ -1,0 +1,48 @@
+<app-register-container
+  headerTitle="Criar competência"
+  [breadcrumbsPaths]="breadcrumbsPaths"
+  [isSaveButtonDisabled]="formService.isFormInvalid()"
+  (saveClicked)="save()"
+>
+  <form [formGroup]="formService.form">
+    <rh-input-text
+      label="Nome da competência"
+      [isRequired]="true"
+      [isInvalid]="formService.isFieldInvalid('name')"
+      name="name"
+      [value]="formService.getFieldValue('name')"
+      (valueUpdated)="updateFieldValue('name', $event)"
+    >
+      <rh-input-error-message
+        slot="error-message"
+        [isVisible]="formService.hasError('name', 'required')"
+      >
+        Campo obrigatório
+      </rh-input-error-message>
+    </rh-input-text>
+
+    <rh-text-area
+      label="Descrição da competência"
+      [isRequired]="true"
+      [isInvalid]="formService.isFieldInvalid('description')"
+      name="description"
+      (valueUpdated)="updateFieldValue('description', $event)"
+    >
+      <rh-input-error-message
+        slot="error-message"
+        [isVisible]="formService.hasError('description', 'required')"
+      >
+        Campo obrigatório
+      </rh-input-error-message>
+    </rh-text-area>
+
+    <rh-input-range-slider
+      label="Selecione o intervalo para a nota ideal da competência"
+      [minGap]="3"
+      [initialMinValueCursor]="formService.getFieldValue('idealGradeMin')"
+      [initialMaxValueCursor]="formService.getFieldValue('idealGradeMax')"
+      (minValueUpdated)="updateFieldValue('idealGradeMin', $event)"
+      (maxValueUpdated)="updateFieldValue('idealGradeMax', $event)"
+    ></rh-input-range-slider>
+  </form>
+</app-register-container>
