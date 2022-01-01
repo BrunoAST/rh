@@ -1,13 +1,12 @@
 import { CommonModule } from "@angular/common";
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
+import { NgModule } from "@angular/core";
 
+import { ActionHeaderModule } from "../action-header/action-header.module";
 import { RegisterContainerComponent } from "./register-container.component";
 
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, ActionHeaderModule],
   declarations: [RegisterContainerComponent],
-  exports: [RegisterContainerComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  exports: [RegisterContainerComponent]
 })
 export class RegisterContainerModule { }

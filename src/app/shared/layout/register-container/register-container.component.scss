@@ -8,8 +8,10 @@
   max-width: 1250px;
   height: calc(100vh - 5rem);
 
-  .header,
   .content {
+    min-height: calc(100vh - 10rem);
+    gap: 1rem;
+    overflow: auto;
     background-color: $white;
     border-radius: 8px;
     padding: 1.5rem;
@@ -17,46 +19,6 @@
     @include media-breakpoint("medium") {
       padding: 0.5rem 1rem;
     }
-  }
-
-  .header {
-    margin-bottom: 1rem;
-
-    @include media-breakpoint("small") {
-      gap: 1rem;
-    }
-
-    &__breadcrumbs {
-      margin-bottom: 0.5rem;
-    }
-
-    &__action {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      @include media-breakpoint("small") {
-        flex-direction: column;
-        gap: 1rem;
-        margin: 0.5rem;
-      }
-
-      .title {
-        color: $primary-dark;
-        font-weight: 600;
-        font-size: 1.7rem;
-
-        @include media-breakpoint("small") {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  .content {
-    min-height: calc(100vh - 10rem);
-    gap: 1rem;
-    overflow: auto;
 
     @include media-breakpoint("small") {
       overflow: initial;

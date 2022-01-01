@@ -1,24 +1,10 @@
 <div class="container">
-  <div class="header">
-    <rh-breadcrumbs
-      class="header__breadcrumbs"
-      [paths]="breadcrumbsPaths"
-      (pathClicked)="navigateToPath($event)"
-    ></rh-breadcrumbs>
-
-    <div class="header__action">
-      <h1 class="title">{{ headerTitle }}</h1>
-      <rh-button
-        variant="filled"
-        ionIconName="save"
-        [disabled]="isSaveButtonDisabled"
-        (clicked)="emitOnSaveClicked()"
-      >
-        Salvar
-      </rh-button>
-    </div>
-  </div>
-
+  <app-action-header
+    [breadcrumbsPaths]="breadcrumbsPaths"
+    [headerTitle]="headerTitle"
+    [isActionButtonDisabled]="isActionButtonDisabled"
+    (actionButtonClicked)="actionButtonClicked.emit()"
+  ></app-action-header>
   <div class="content">
     <ng-content></ng-content>
   </div>
