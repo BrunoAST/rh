@@ -5,6 +5,7 @@ import { BreadcrumbsPaths } from "@innove/rh-core-ui";
 export class ActionHeader {
   @Input() breadcrumbsPaths!: BreadcrumbsPaths[];
   @Input() headerTitle!: string;
+  @Input() actionButtonLabel!: string;
   @Input() isActionButtonDisabled = false;
 
   @Output() actionButtonClicked: EventEmitter<void> = new EventEmitter<void>();
