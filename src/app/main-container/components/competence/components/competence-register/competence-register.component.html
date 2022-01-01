@@ -1,8 +1,8 @@
 <app-register-container
   headerTitle="Criar competência"
   [breadcrumbsPaths]="breadcrumbsPaths"
-  [isSaveButtonDisabled]="formService.isFormInvalid()"
-  (saveClicked)="save()"
+  [isActionButtonDisabled]="formService.isFormInvalid()"
+  (actionButtonClicked)="save()"
 >
   <form [formGroup]="formService.form">
     <rh-input-text
