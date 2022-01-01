@@ -42,6 +42,13 @@ describe(ActionHeaderComponent.name, () => {
     expect(headElement.textContent).toBe(title);
   });
 
+  it(`Should receive a label button (@Input actionButtonLabel)`, () => {
+    const label = faker.random.word();
+    component.actionButtonLabel = label;
+    fixture.detectChanges();
+    expect(actionButton().textContent.trim()).toBe(label);
+  });
+
   it(`Should start with action button enabled`, () => {
     expect(actionButton().disabled).toBeFalsy();
   });
