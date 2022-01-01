@@ -59,7 +59,7 @@ describe(CompetenceRegisterComponent.name, () => {
 
   it(`Should call #${CompetenceRegisterComponent.prototype.save.name} when save button is clicked`, () => {
     spyOn(component, "save");
-    registerContainer().dispatchEvent(new Event("saveClicked"));
+    registerContainer().dispatchEvent(new Event("actionButtonClicked"));
     expect(component.save).toHaveBeenCalled();
   });
 });
