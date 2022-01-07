@@ -1,0 +1,5 @@
+@import "../../../theme/mixins/default-content-container";
+@import "../../../theme/partials/colors";
+@import "../../../theme/mixins/media-breakpoint";
+
+@include defaultContentContainer();

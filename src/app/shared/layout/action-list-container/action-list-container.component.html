@@ -1,0 +1,15 @@
+<div class="container">
+  <app-action-header
+    actionButtonLabel="Cadastrar"
+    [breadcrumbsPaths]="breadcrumbsPaths"
+    [headerTitle]="headerTitle"
+    [isActionButtonDisabled]="isActionButtonDisabled"
+    (actionButtonClicked)="actionButtonClicked.emit()"
+  ></app-action-header>
+  <div class="content">
+    <rh-action-list
+      [items]="items"
+      [fieldConfigs]="fieldConfigs"
+    ></rh-action-list>
+  </div>
+</div>
