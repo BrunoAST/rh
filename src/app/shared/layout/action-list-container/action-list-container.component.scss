@@ -2,4 +2,15 @@
 @import "../../../theme/partials/colors";
 @import "../../../theme/mixins/media-breakpoint";
 
-@include defaultContentContainer();
+@include defaultContentContainer(calc(100vh - 15rem));
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
