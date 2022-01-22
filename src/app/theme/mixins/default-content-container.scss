@@ -1,7 +1,7 @@
 @import "../partials/colors";
 @import "./media-breakpoint.scss";
 
-@mixin defaultContentContainer() {
+@mixin defaultContentContainer($content-min-height: calc(100vh - 10rem)) {
   .container {
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
     }
 
     .content {
-      min-height: calc(100vh - 10rem);
+      min-height: $content-min-height;
       gap: 1rem;
       overflow: auto;
       background-color: $white;
