@@ -1,4 +1,4 @@
-import { BreadcrumbsPaths } from "@innove/rh-core-ui";
+import { BreadcrumbsPaths } from "@innove/rh-core-ui/dist/types/components/breadcrumbs/types/breadcrumbs-paths";
 import * as faker from "faker";
 
 export const BREADCRUMBS_PATHS: BreadcrumbsPaths[] = [
