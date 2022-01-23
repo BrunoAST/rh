@@ -8,7 +8,7 @@ import { MENU_ITEMS_MOCK } from "./menu-items-mock";
 let fixture: ComponentFixture<SideBarContainerComponent>;
 let component: SideBarContainerComponent;
 
-const sideBarElement = (): HTMLRhSideBarElement => {
+const sideBarElement = () => {
   return fixture.nativeElement.querySelector("rh-side-bar");
 }
 
