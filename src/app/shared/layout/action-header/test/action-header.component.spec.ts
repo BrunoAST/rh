@@ -9,11 +9,11 @@ import { BREADCRUMBS_PATHS } from "./breadcrumb-paths-mock";
 let fixture: ComponentFixture<ActionHeaderComponent>;
 let component: ActionHeaderComponent;
 
-const actionButton = (): HTMLRhButtonElement => {
+const actionButton = () => {
   return fixture.nativeElement.querySelector("rh-button");
 }
 
-const breadcrumbs = (): HTMLRhBreadcrumbsElement => {
+const breadcrumbs = () => {
   return fixture.nativeElement.querySelector("rh-breadcrumbs");
 }
 

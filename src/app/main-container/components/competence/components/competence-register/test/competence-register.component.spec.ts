@@ -28,30 +28,30 @@ describe(CompetenceRegisterComponent.name, () => {
   });
 
   it("Should show required error message when name input is empty", () => {
-    const inputName: HTMLRhInputTextElement = fixture.nativeElement.querySelector("rh-input-text");
-    const errorMessage: HTMLRhInputErrorMessageElement = inputName.querySelector("rh-input-error-message");
+    const inputName = fixture.nativeElement.querySelector("rh-input-text");
+    const errorMessage = inputName.querySelector("rh-input-error-message");
     expect(errorMessage.textContent.trim()).toBe("Campo obrigatório");
     expect(errorMessage.isVisible).toBeTruthy();
   });
 
   it("Should hide required error message when name input is not empty", () => {
-    const inputName: HTMLRhInputTextElement = fixture.nativeElement.querySelector("rh-input-text");
-    const errorMessage: HTMLRhInputErrorMessageElement = inputName.querySelector("rh-input-error-message");
+    const inputName = fixture.nativeElement.querySelector("rh-input-text");
+    const errorMessage = inputName.querySelector("rh-input-error-message");
     inputName.dispatchEvent(new CustomEvent("valueUpdated", { detail: faker.random.word() }));
     fixture.detectChanges();
     expect(errorMessage.isVisible).toBeFalsy();
   });
 
   it("Should show required error message when description input is empty", () => {
-    const inputDescription: HTMLRhTextAreaElement = fixture.nativeElement.querySelector("rh-text-area");
-    const errorMessage: HTMLRhInputErrorMessageElement = inputDescription.querySelector("rh-input-error-message");
+    const inputDescription = fixture.nativeElement.querySelector("rh-text-area");
+    const errorMessage = inputDescription.querySelector("rh-input-error-message");
     expect(errorMessage.textContent.trim()).toBe("Campo obrigatório");
     expect(errorMessage.isVisible).toBeTruthy();
   });
 
   it("Should hide required error message when description input is not empty", () => {
-    const inputDescription: HTMLRhTextAreaElement = fixture.nativeElement.querySelector("rh-text-area");
-    const errorMessage: HTMLRhInputErrorMessageElement = inputDescription.querySelector("rh-input-error-message");
+    const inputDescription = fixture.nativeElement.querySelector("rh-text-area");
+    const errorMessage = inputDescription.querySelector("rh-input-error-message");
     inputDescription.dispatchEvent(new CustomEvent("valueUpdated", { detail: faker.random.word() }));
     fixture.detectChanges();
     expect(errorMessage.isVisible).toBeFalsy();
