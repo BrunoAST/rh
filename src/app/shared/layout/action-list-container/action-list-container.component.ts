@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
-import { ActionListFieldConfig } from "@innove/rh-core-ui";
+import { ActionListFieldConfig } from "@innove/rh-core-ui/dist/types/components/action-list/types/action-list-field-config";
+import { SelectOptions } from "@innove/rh-core-ui/dist/types/components/select/types/select-options";
 
 import { ActionHeader } from "../action-header/contract/action-header";
 
@@ -11,4 +12,23 @@ import { ActionHeader } from "../action-header/contract/action-header";
 export class ActionListContainerComponent extends ActionHeader {
   @Input() fieldConfigs: ActionListFieldConfig[] = [];
   @Input() items: any[] = [];
+
+  options: SelectOptions[] = [
+    {
+      title: "10",
+      value: "10"
+    },
+    {
+      title: "20",
+      value: "20"
+    },
+    {
+      title: "30",
+      value: "30"
+    },
+    {
+      title: "50",
+      value: "50"
+    }
+  ];
 }
