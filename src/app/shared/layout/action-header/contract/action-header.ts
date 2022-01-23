@@ -1,5 +1,5 @@
 import { Input, Output, EventEmitter, Directive } from "@angular/core";
-import { BreadcrumbsPaths } from "@innove/rh-core-ui";
+import { BreadcrumbsPaths } from "@innove/rh-core-ui/dist/types/components/breadcrumbs/types/breadcrumbs-paths";
 
 @Directive()
 export class ActionHeader {

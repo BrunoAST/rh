@@ -1,4 +1,4 @@
-import { MenuItems } from "@innove/rh-core-ui";
+import { MenuItems } from "@innove/rh-core-ui/dist/types/shared/types/menu-items";
 import { APP_ROUTES } from "src/app/shared/routes/app-routes";
 
 export const OPTIONS: MenuItems[] = [
