@@ -1,22 +1,25 @@
-<form class="filter">
+<form class="filter" [formGroup]="formService.form">
   <div class="search">
     <rh-input-text
       placeholder="Pesquise uma competência"
       ariaLabel="Pesquise uma competência"
+      name="filter"
+      [value]="formService.getFieldValue('filter')"
+      (valueUpdated)="updateFieldValue('filter', $event)"
     ></rh-input-text>
     <rh-button
       variant="icon"
       ion-icon-name="search"
-    >
-    </rh-button>
+    ></rh-button>
   </div>
   <div class="items-per-page-select">
     <span id="items-per-page">Items por página:</span>
     <rh-select
-      value="10"
       aria-describedby="items-per-page"
+      name="itemsPerPage"
       [options]="options"
-    >
-    </rh-select>
+      [value]="formService.getFieldValue('itemsPerPage')"
+      (valueSelected)="updateFieldValue('itemsPerPage', $event)"
+    ></rh-select>
   </div>
 </form>
