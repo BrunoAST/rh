@@ -7,7 +7,9 @@
     (actionButtonClicked)="actionButtonClicked.emit()"
   ></app-action-header>
   <div class="content">
-    <app-action-list-filter>
+    <app-action-list-filter
+      (filteredData)="filterData($event)"
+    >
     </app-action-list-filter>
     <rh-action-list
       [items]="items"
