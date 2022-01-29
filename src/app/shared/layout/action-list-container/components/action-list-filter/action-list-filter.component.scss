@@ -1,0 +1,40 @@
+@import "../../../../../theme/mixins/media-breakpoint";
+@import "../../../../../theme/partials/colors";
+
+.filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  @include media-breakpoint("medium") {
+    flex-direction: column;
+  }
+
+  .search,
+  .items-per-page-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search > rh-button,
+  .items-per-page-select {
+    padding-bottom: 1rem;
+  }
+
+  .search > rh-input-text {
+    width: 20vw;
+
+    @include media-breakpoint("medium") {
+      width: 100%;
+    }
+  }
+
+  .items-per-page-select {
+    color: $gray-dark;
+  }
+}

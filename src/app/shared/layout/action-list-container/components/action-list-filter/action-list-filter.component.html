@@ -1,0 +1,22 @@
+<form class="filter">
+  <div class="search">
+    <rh-input-text
+      placeholder="Pesquise uma competência"
+      ariaLabel="Pesquise uma competência"
+    ></rh-input-text>
+    <rh-button
+      variant="icon"
+      ion-icon-name="search"
+    >
+    </rh-button>
+  </div>
+  <div class="items-per-page-select">
+    <span id="items-per-page">Items por página:</span>
+    <rh-select
+      value="10"
+      aria-describedby="items-per-page"
+      [options]="options"
+    >
+    </rh-select>
+  </div>
+</form>
