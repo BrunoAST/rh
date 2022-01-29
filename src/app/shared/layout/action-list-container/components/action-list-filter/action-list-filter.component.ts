@@ -1,7 +1,8 @@
-import { Component, OnInit } from "@angular/core";
-import { SelectOptions } from "@innove/rh-core-ui/dist/types/components/select/types/select-options";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 
 import { ActionListFilterFormService } from "./services/action-list-filter-form.service";
+import { ITEMS_PER_PAGE_OPTIONS } from "./constants/items-per-page-options";
+import { ActionListFilterData } from "./types/action-list-filter-data";
 
 @Component({
   selector: "app-action-list-filter",
@@ -10,24 +11,9 @@ import { ActionListFilterFormService } from "./services/action-list-filter-form.
   providers: [ActionListFilterFormService]
 })
 export class ActionListFilterComponent implements OnInit {
-  options: SelectOptions[] = [
-    {
-      title: "10",
-      value: "10"
-    },
-    {
-      title: "20",
-      value: "20"
-    },
-    {
-      title: "30",
-      value: "30"
-    },
-    {
-      title: "50",
-      value: "50"
-    }
-  ];
+  @Output() filteredData = new EventEmitter<ActionListFilterData>();
+
+  options = ITEMS_PER_PAGE_OPTIONS;
 
   constructor(public formService: ActionListFilterFormService) { }
 
@@ -36,7 +22,11 @@ export class ActionListFilterComponent implements OnInit {
   }
 
   updateFieldValue(field: string, event: any): void {
-    console.log("OLA");
     this.formService.updateFieldValue(field, event.detail);
+  }
+
+  onSubmit(event: Event): void {
+    event.preventDefault();
+    this.filteredData.emit(this.formService.form.getRawValue());
   }
 }

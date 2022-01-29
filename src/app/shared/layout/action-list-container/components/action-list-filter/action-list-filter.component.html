@@ -1,4 +1,8 @@
-<form class="filter" [formGroup]="formService.form">
+<form
+  class="filter"
+  [formGroup]="formService.form"
+  (keyup.enter)="onSubmit($event)"
+>
   <div class="search">
     <rh-input-text
       placeholder="Pesquise uma competência"
@@ -10,6 +14,7 @@
     <rh-button
       variant="icon"
       ion-icon-name="search"
+      (clicked)="onSubmit($event)"
     ></rh-button>
   </div>
   <div class="items-per-page-select">
