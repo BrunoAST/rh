@@ -1,5 +1,6 @@
 export const APP_ROUTES = {
-  home: "",
+  affirmation: "afirmacoes",
   competence: "competencias",
+  home: "",
   register: "cadastro",
 };
