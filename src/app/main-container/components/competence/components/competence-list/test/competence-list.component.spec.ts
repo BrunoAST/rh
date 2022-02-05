@@ -32,11 +32,7 @@ describe(CompetenceListComponent.name, () => {
   });
 
   it(`Should contains the correct values for the list`, () => {
-    const item = {
-      name: faker.random.word(),
-      email: faker.internet.email()
-    };
-    expect(COMPETENCE_LIST_FIELD_CONFIGS[0].valueToBeShowed(item)).toBe(item.name);
-    expect(COMPETENCE_LIST_FIELD_CONFIGS[1].valueToBeShowed(item)).toBe(item.email);
+    const item = { competence: faker.random.word() };
+    expect(COMPETENCE_LIST_FIELD_CONFIGS[0].valueToBeShowed(item)).toBe(item.competence);
   });
 });
