@@ -23,7 +23,7 @@ describe(CompetenceRegisterComponent.name, () => {
     fixture.detectChanges();
   });
 
-  it("Should contain bread crumbs paths", () => {
+  it("Should contain breadcrumbs paths", () => {
     expect(component.breadcrumbsPaths).toEqual(COMPETENCE_BREADCRUMBS);
   });
 
