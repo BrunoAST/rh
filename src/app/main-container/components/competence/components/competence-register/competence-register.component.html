@@ -4,7 +4,7 @@
   [isActionButtonDisabled]="formService.isFormInvalid()"
   (actionButtonClicked)="save()"
 >
-  <form [formGroup]="formService.form">
+  <form [formGroup]="formService.form" class="flex-direction-column gap2-gt-md">
     <rh-input-text
       label="Nome da competência"
       [isRequired]="true"

@@ -1,0 +1,9 @@
+@import "../mixins/media-breakpoint";
+
+.gap2-gt-md {
+  gap: 2rem;
+
+  @include media-breakpoint("medium") {
+    gap: 1rem;
+  }
+}
