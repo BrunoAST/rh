@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 
 import { ActionListFilterFormService } from "./services/action-list-filter-form.service";
 import { ITEMS_PER_PAGE_OPTIONS } from "./constants/items-per-page-options";
@@ -11,6 +11,8 @@ import { ActionListFilterData } from "./types/action-list-filter-data";
   providers: [ActionListFilterFormService]
 })
 export class ActionListFilterComponent implements OnInit {
+  @Input() searchInputPlaceholderText!: string;
+
   @Output() filteredData = new EventEmitter<ActionListFilterData>();
 
   options = ITEMS_PER_PAGE_OPTIONS;

@@ -8,6 +8,7 @@
   ></app-action-header>
   <div class="content">
     <app-action-list-filter
+      [searchInputPlaceholderText]="searchInputPlaceholderText"
       (filteredData)="filterData($event)"
     >
     </app-action-list-filter>

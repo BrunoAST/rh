@@ -10,6 +10,7 @@ import { ActionListFilterData } from "./components/action-list-filter/types/acti
   styleUrls: ["./action-list-container.component.scss"]
 })
 export class ActionListContainerComponent extends ActionHeader {
+  @Input() searchInputPlaceholderText!: string;
   @Input() fieldConfigs: ActionListFieldConfig[] = [];
   @Input() items: any[] = [];
 

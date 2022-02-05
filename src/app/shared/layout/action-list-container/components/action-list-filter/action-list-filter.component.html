@@ -5,9 +5,9 @@
 >
   <div class="search">
     <rh-input-text
-      placeholder="Pesquise uma competência"
-      ariaLabel="Pesquise uma competência"
       name="filter"
+      [placeholder]="searchInputPlaceholderText"
+      [ariaLabel]="searchInputPlaceholderText"
       [value]="formService.getFieldValue('filter')"
       (valueUpdated)="updateFieldValue('filter', $event)"
     ></rh-input-text>
