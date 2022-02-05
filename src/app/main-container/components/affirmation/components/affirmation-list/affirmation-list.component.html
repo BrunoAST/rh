@@ -1,1 +1,8 @@
-Affirmation list component
+<app-action-list
+  headerTitle="Afirmações"
+  searchInputPlaceholderText="Pesquise uma afirmação"
+  [breadcrumbsPaths]="breadcrumbsPaths"
+  [items]="items"
+  [fieldConfigs]="fieldConfigs"
+  (actionButtonClicked)="onActionButtonClicked()"
+></app-action-list>
