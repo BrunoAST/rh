@@ -7,6 +7,10 @@ import { ActionListFilterModule } from "../action-list-filter.module";
 let component: ActionListFilterComponent;
 let fixture: ComponentFixture<ActionListFilterComponent>;
 
+const filterInput = () => {
+  return fixture.debugElement.nativeElement.querySelector("rh-input-text");
+}
+
 describe(ActionListFilterComponent.name, () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -22,12 +26,18 @@ describe(ActionListFilterComponent.name, () => {
     expect(selectItemsPerPage.value).toBe("10");
   });
 
+  it("Should receive search input placeholder text", () => {
+    const placeholderText = faker.random.word();
+    component.searchInputPlaceholderText = placeholderText;
+    fixture.detectChanges();
+    expect(component.searchInputPlaceholderText).toBe(placeholderText);
+  });
+
   it("Should emit the filtered data via form submit", () => {
     const filteredDataSpy = spyOn(component.filteredData, "emit");
     const filter = faker.random.words();
-    const filterInput = fixture.nativeElement.querySelector("rh-input-text");
     const form = fixture.nativeElement.querySelector("form");
-    filterInput.dispatchEvent(new CustomEvent("valueUpdated", { detail: filter }));
+    filterInput().dispatchEvent(new CustomEvent("valueUpdated", { detail: filter }));
     form.dispatchEvent(new KeyboardEvent("keyup", { key: "Enter" }));
     fixture.detectChanges();
     expect(filteredDataSpy).toHaveBeenCalledWith({ filter, itemsPerPage: "10" });
@@ -36,9 +46,8 @@ describe(ActionListFilterComponent.name, () => {
   it("Should emit the filtered data via button click", () => {
     const filteredDataSpy = spyOn(component.filteredData, "emit");
     const filter = faker.random.words();
-    const filterInput = fixture.nativeElement.querySelector("rh-input-text");
     const button = fixture.nativeElement.querySelector("rh-button");
-    filterInput.dispatchEvent(new CustomEvent("valueUpdated", { detail: filter }));
+    filterInput().dispatchEvent(new CustomEvent("valueUpdated", { detail: filter }));
     button.dispatchEvent(new CustomEvent("clicked"));
     fixture.detectChanges();
     expect(filteredDataSpy).toHaveBeenCalledWith({ filter, itemsPerPage: "10" });
