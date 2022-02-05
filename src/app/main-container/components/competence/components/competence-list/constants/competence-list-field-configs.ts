@@ -2,9 +2,6 @@ import { ActionListFieldConfig } from "@innove/rh-core-ui/dist/types/components/
 
 export const COMPETENCE_LIST_FIELD_CONFIGS: ActionListFieldConfig[] = [
   {
-    valueToBeShowed: (value) => value.name
-  },
-  {
-    valueToBeShowed: (value) => value.email
+    valueToBeShowed: (value) => value.competence
   }
 ];

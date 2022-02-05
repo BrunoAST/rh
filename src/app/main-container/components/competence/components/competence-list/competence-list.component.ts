@@ -13,13 +13,7 @@ export class CompetenceListComponent {
   breadcrumbsPaths = COMPETENCE_LIST_BREADCRUMBS;
   fieldConfigs = COMPETENCE_LIST_FIELD_CONFIGS;
 
-  items = Array.from({ length: 20 }).map(() => (
-    {
-      name: faker.name.findName(),
-      age: faker.datatype.number({ min: 18, max: 80 }),
-      email: faker.internet.email()
-    }
-  ));
+  items = Array.from({ length: 20 }).map((_, index) => ({ competence: `Competência ${index + 1}` }));
 
   constructor(public router: Router) { }
 
