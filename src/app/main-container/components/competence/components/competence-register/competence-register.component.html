@@ -26,6 +26,7 @@
       [isRequired]="true"
       [isInvalid]="formService.isFieldInvalid('description')"
       name="description"
+      [value]="formService.getFieldValue('description')"
       (valueUpdated)="updateFieldValue('description', $event)"
     >
       <rh-input-error-message
