@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import * as faker from "faker";
 
 import { APP_ROUTES } from "src/app/shared/routes/app-routes";
 import { COMPETENCE_LIST_BREADCRUMBS } from "./constants/competence-list-breadcrumbs";
