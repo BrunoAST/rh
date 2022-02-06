@@ -1,1 +1,48 @@
-affirmation register
+<app-register-container
+  headerTitle="Criar afirmação"
+  [breadcrumbsPaths]="breadcrumbsPaths"
+  [isActionButtonDisabled]="formService.isFormInvalid()"
+  (actionButtonClicked)="save()"
+>
+  <form [formGroup]="formService.form" class="flex-direction-column gap2-gt-md">
+    <rh-input-text
+      label="Nome da afirmação"
+      [isRequired]="true"
+      [isInvalid]="formService.isFieldInvalid('name')"
+      name="name"
+      [value]="formService.getFieldValue('name')"
+      (valueUpdated)="updateFieldValue('name', $event)"
+    >
+      <rh-input-error-message
+        slot="error-message"
+        [isVisible]="formService.hasError('name', 'required')"
+      >
+        Campo obrigatório
+      </rh-input-error-message>
+    </rh-input-text>
+
+    <rh-text-area
+      label="Descrição da afirmação"
+      [isRequired]="true"
+      [isInvalid]="formService.isFieldInvalid('description')"
+      name="description"
+      [value]="formService.getFieldValue('description')"
+      (valueUpdated)="updateFieldValue('description', $event)"
+    >
+      <rh-input-error-message
+        slot="error-message"
+        [isVisible]="formService.hasError('description', 'required')"
+      >
+        Campo obrigatório
+      </rh-input-error-message>
+    </rh-text-area>
+
+    <rh-select
+      name="competenceId"
+      label="Selecione uma competência para a afirmação"
+      placeholder="Selecione"
+      [options]="options"
+      [value]="formService.getFieldValue('competenceId')"
+    ></rh-select>
+  </form>
+</app-register-container>
