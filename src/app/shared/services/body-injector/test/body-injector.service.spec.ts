@@ -25,7 +25,6 @@ describe(BodyInjectorService.name, () => {
 
   it("Should attach component", () => {
     service.stackBeforeAppRoot(fixture.componentRef);
-    console.log(fixture.nativeElement)
     expect(applicationRef.viewCount).toBe(1);
   });
 });
